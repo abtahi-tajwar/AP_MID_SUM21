@@ -1,0 +1,30 @@
+﻿@model June14ClassPerformance.Models.Student
+@{
+    ViewBag.Title = "Add";
+}
+
+<h2>Add Student</h2>
+<form action="/Student/Add" method="POST">
+    <div class="form-group">
+        <label for="exampleInputEmail1">Name</label>
+        <input type="text" name="Name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Name">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Date of Birth</label>
+        <input type="date" name="DOB" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Date of Birth">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Credits Completed</label>
+        <input type="number" name="Credit" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Credit Completed">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">CGPA</label>
+        <input type="text" name="CGPA" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="CGPA">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Department Id</label>
+        <input type="number" name="Dept_Id" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Department ID">
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>
+

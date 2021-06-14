@@ -1,0 +1,32 @@
+﻿@model List<June14ClassPerformance.Models.Student>
+@{
+    ViewBag.Title = "All";
+}
+
+<h2>All Students</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Credit</th>
+            <th scope="col">CGPA</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in @Model)
+        {
+            <tr>
+                <th scope="row">@student.Id</th>
+                <td>@student.Name</td>
+                <td>@student.Credit</td>
+                <td>@student.CGPA</td>
+                <td><a href="/Student/Edit/@student.Id" class="btn btn-success">Edit</a></td>
+                <td><a href="/Student/Delete/@student.Id" class="btn btn-danger">Delete</a></td>
+            </tr>
+        }
+        </tbody>
+</table>
+
